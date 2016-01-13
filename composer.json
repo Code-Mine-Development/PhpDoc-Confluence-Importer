@@ -1,0 +1,26 @@
+{
+    "name": "code-mine/php-doc-confluence-importer",
+    "description": "Library that allows to import php documentation into Confluence via rest apiDesigned to work with PhpDocumentator xml output and PhpUnit testdox html files.",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.1",
+        "symfony/console": "^3.0",
+        "psr/http-message": "1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Grabek",
+            "email": "adam@grabek.io"
+        }
+    ],
+    "minimum-stability": "beta",
+    "autoload": {
+        "psr-4": {
+            "CodeMine//" : "src//"
+        }
+    }
+}
