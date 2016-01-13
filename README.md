@@ -3,6 +3,8 @@ Library that allows to import php documentation into Confluence via rest api
 
 Designed to work with PhpDocumentator xml output and PhpUnit testdox html files.
 
+Different documentation/build artifact exporters are also considered. 
+
 ## TODO
 
 1. Confluence API OO wrapper
