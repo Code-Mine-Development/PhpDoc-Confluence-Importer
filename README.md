@@ -37,3 +37,7 @@ export testdox
   -p --parent : identifier of the parent page, if not provided, pages will be created in space root
 
 ```
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Code-Mine-Development/phpdoc-confluence-importer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
