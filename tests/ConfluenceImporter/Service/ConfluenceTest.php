@@ -6,6 +6,7 @@
  */
 
 namespace CodeMine\ConfluenceImporter\Service;
+use CodeMine\ConfluenceImporter\Service\Confluence\InstanceInterface;
 use GuzzleHttp\ClientInterface;
 
 /**
@@ -19,9 +20,12 @@ class ConfluenceTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers ::__construct()
      */
-    public function testClassNeedsToBeConstructedWithGuzzleClientInterface()
+    public function testClassNeedsToBeConstructedWithGuzzleClientInterfaceAndInstanceObject()
     {
-        $confluence = new Confluence($this->getMockForAbstractClass(ClientInterface::class));
+        $confluence = new Confluence(
+            $this->getMockForAbstractClass(ClientInterface::class),
+            $this->getMockForAbstractClass(InstanceInterface::class)
+        );
 
         $this->assertInstanceOf(Confluence::class, $confluence);
     }

@@ -7,6 +7,7 @@
 
 namespace CodeMine\ConfluenceImporter\Service;
 
+use CodeMine\ConfluenceImporter\Service\Confluence\InstanceInterface;
 use GuzzleHttp\ClientInterface;
 
 /**
@@ -20,14 +21,20 @@ class Confluence
      * @var \GuzzleHttp\ClientInterface
      */
     private $client;
+    /**
+     * @var \CodeMine\ConfluenceImporter\Service\InstanceInterface
+     */
+    private $confluenceInstance;
 
     /**
      * Confluence constructor.
      *
      * @param \GuzzleHttp\ClientInterface $client
+     * @param \CodeMine\ConfluenceImporter\Service\Confluence\InstanceInterface $confluenceInstance
      */
-    public function __construct(ClientInterface $client)
+    public function __construct(ClientInterface $client, InstanceInterface $confluenceInstance)
     {
         $this->client = $client;
+        $this->confluenceInstance = $confluenceInstance;
     }
 }
