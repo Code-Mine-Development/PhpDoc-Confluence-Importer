@@ -1,0 +1,16 @@
+<phpunit
+        forceCoversAnnotation="true"
+        verbose="true" bootstrap="tests/bootstrap.php" colors="true" columns="80" beStrictAboutOutputDuringTests="true"
+        beStrictAboutTestsThatDoNotTestAnything="true" beStrictAboutResourceUsageDuringSmallTests="true"
+        beStrictAboutTodoAnnotatedTests="true" checkForUnintentionallyCoveredCode="true">
+    <testsuites>
+        <testsuite name="Det Unit Test Suite">
+            <directory>tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
