@@ -32,11 +32,4 @@ class InstanceTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(false, $instance->useContext());
     }
 
-    /**
-     * @covers ::__construct
-     */
-    public function testUrlIsValidated()
-    {
-
-    }
 }
