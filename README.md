@@ -1,4 +1,8 @@
+Master : [![Build Status](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer.svg?branch=master)](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer)
+Develop : [![Build Status](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer.svg?branch=develop)](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer)
+
 # PhpDoc Confluence Importer
+
 Library that allows to import php documentation into Confluence via rest api
 
 Designed to work with PhpDocumentator xml output and PhpUnit testdox html files.
