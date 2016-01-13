@@ -1,5 +1,4 @@
-Master : [![Build Status](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer.svg?branch=master)](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer)
-Develop : [![Build Status](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer.svg?branch=develop)](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer)
+[![Build Status](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer.svg?branch=master)](https://travis-ci.org/Code-Mine-Development/PhpDoc-Confluence-Importer)  [![VersionEye](https://www.versioneye.com/user/projects/569641bfaf789b0027001a2b/badge.svg)](https://www.versioneye.com/user/projects/569641bfaf789b0027001a2b)
 
 # PhpDoc Confluence Importer
 
