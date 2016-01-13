@@ -15,12 +15,16 @@
         {
             "name": "Adam Grabek",
             "email": "adam@grabek.io"
+        },
+        {
+            "name": "Przemysław Adamiec",
+            "email": "przemek@adamiec.it"
         }
     ],
     "minimum-stability": "beta",
     "autoload": {
         "psr-4": {
-            "CodeMine//" : "src//"
+            "CodeMine\\" : "src/"
         }
     }
 }
