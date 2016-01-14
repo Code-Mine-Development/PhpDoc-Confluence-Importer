@@ -1,9 +1,4 @@
 <?php
-/**
- * Creator: adamgrabek
- * Date: 13.01.2016
- * Time: 15:25
- */
 
 namespace CodeMine\ConfluenceImporter\Documentation;
 
@@ -23,4 +18,9 @@ interface PageInterface
      * @return string
      */
     public function content();
+
+    /**
+     * @return array<PageInterface>
+     */
+    public function children();
 }
