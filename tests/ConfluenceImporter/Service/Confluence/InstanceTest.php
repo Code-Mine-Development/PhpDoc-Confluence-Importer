@@ -11,7 +11,7 @@ namespace CodeMine\ConfluenceImporter\Service\Confluence;
  * Class InstanceTest
  *
  * @package CodeMine\ConfluenceImporter\Service\Confluence
- * @covers CodeMine\ConfluenceImporter\Service\Confluence\Instance
+ * @coversDefaultClass CodeMine\ConfluenceImporter\Service\Confluence\Instance
  */
 class InstanceTest extends \PHPUnit_Framework_TestCase
 {
