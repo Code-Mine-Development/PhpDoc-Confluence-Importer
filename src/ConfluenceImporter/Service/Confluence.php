@@ -34,7 +34,7 @@ class Confluence
      */
     public function __construct(ClientInterface $client, InstanceInterface $confluenceInstance)
     {
-        $this->client = $client;
+        $this->client             = $client;
         $this->confluenceInstance = $confluenceInstance;
     }
 }
