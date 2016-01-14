@@ -1,9 +1,9 @@
 <?php
 /**
- * Creator: adamgrabek
- * Date: 13.01.2016
- * Time: 14:54
- */
+     * Creator: adamgrabek
+     * Date: 13.01.2016
+     * Time: 14:54
+     */
 
 namespace CodeMine\ConfluenceImporter\Service;
 
@@ -34,7 +34,7 @@ class Confluence
      */
     public function __construct(ClientInterface $client, InstanceInterface $confluenceInstance)
     {
-        $this->client = $client;
+        $this->client             = $client;
         $this->confluenceInstance = $confluenceInstance;
     }
 }

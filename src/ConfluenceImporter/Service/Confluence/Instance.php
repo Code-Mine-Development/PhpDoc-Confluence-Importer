@@ -1,9 +1,9 @@
 <?php
 /**
- * Creator: adamgrabek
- * Date: 13.01.2016
- * Time: 15:06
- */
+     * Creator: adamgrabek
+     * Date: 13.01.2016
+     * Time: 15:06
+     */
 
 namespace CodeMine\ConfluenceImporter\Service\Confluence;
 
@@ -42,9 +42,9 @@ class Instance implements InstanceInterface
      */
     public function __construct($url, $username, $password, $useContext)
     {
-        $this->url = $url;
-        $this->username = $username;
-        $this->password = $password;
+        $this->url        = $url;
+        $this->username   = $username;
+        $this->password   = $password;
         $this->useContext = $useContext;
     }
 
@@ -52,7 +52,6 @@ class Instance implements InstanceInterface
     {
         return $this->username;
     }
-
     public function password()
     {
         return $this->password;
