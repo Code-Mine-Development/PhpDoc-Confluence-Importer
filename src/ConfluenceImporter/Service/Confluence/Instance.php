@@ -52,7 +52,6 @@ class Instance implements InstanceInterface
     {
         return $this->username;
     }
-
     public function password()
     {
         return $this->password;
