@@ -42,9 +42,9 @@ class Instance implements InstanceInterface
      */
     public function __construct($url, $username, $password, $useContext)
     {
-        $this->url = $url;
-        $this->username = $username;
-        $this->password = $password;
+        $this->url        = $url;
+        $this->username   = $username;
+        $this->password   = $password;
         $this->useContext = $useContext;
     }
 
