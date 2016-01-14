@@ -1,9 +1,9 @@
 <?php
 /**
- * Creator: adamgrabek
- * Date: 13.01.2016
- * Time: 14:54
- */
+     * Creator: adamgrabek
+     * Date: 13.01.2016
+     * Time: 14:54
+     */
 
 namespace CodeMine\ConfluenceImporter\Service;
 
