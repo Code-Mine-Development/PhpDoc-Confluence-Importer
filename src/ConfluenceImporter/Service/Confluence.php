@@ -8,6 +8,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Stream;
 
 /**
  * Class Confluence
@@ -42,79 +43,51 @@ class Confluence
 
     public function createNewPage(string $key, PageInterface $page, PageInterface $parentPage = NULL)
     {
-        $title = $page->title();
-        $content = $page->content();
-        $pageArray = $page->children();
 
-        $bodyArray = [
-            'type' => 'page',
-            'title' => $title,
-            'space' => [
-                'key' => $key
-            ],
-            'body' => [
-                'storage' => [
-                    'value' => $content,
-                    'representation' => 'storage'
-                ]
-            ]
-        ];
-
-        if (isset($parentPage)){
-            $bodyArray['ancestors'] = [
-              ['id' => $pageId]
-                ];
-        }
+        $body = $this->getBody($key, $page, $parentPage);
+        $headers = $this->getHeaders();
 
 
-        $headers = [
-            'Authorization' => 'Basic ' . $this->getBase64Credentials(),
-            'Content-Type' => 'application/json'
-        ];
-
-
-
-//
-        $body = json_encode($bodyArray);
-        var_dump($bodyArray);
-//        var_dump($headers);
-//        var_dump(Confluence::ADD_PAGE);
-//        var_dump($body);
-
-        $request = new Request('POST', Confluence::ADD_PAGE, $headers, $body);
 
         try {
-            $response = $this->client->send($request); //TODO: put in try and find solution for exception on same page name
-            var_dump($response);
+            $request = $this->getRequest($headers, $body);
+            $response = $this->client->send($request); //TODO: find solution for exception on same page name
+            $pageChildren = $page->children();
+            if (null !== $pageChildren){
+                var_dump('1');
+                var_dump(urlencode('"sda sd"'));die;
+                foreach($pageChildren as $pageChild){
+                    var_dump('2');
+
+                    $childBody = $this->getBody($key, $pageChild, $page);
+                    var_dump('child body');
+                    $childRequest = $this->getRequest($headers, $pageChild);
+                    try {
+                        var_dump('3');
+
+                        $this->client->send($request);
+                    }catch(\Exception $e){
+                        var_dump($e->getMessage());
+                    }
+                }
+
+                var_dump(urlencode('"sda sd"'));die;
+
+            }
+//            var_dump($response->);
         }catch(ClientException $e){
 
-            echo 'ERROR!!!';
+            echo 'ERROR!';
             var_dump($e->getMessage());
             echo 'ERROR!!!';
-            die;
+
+            return FALSE;
         }
         $returnBody = $response->getBody();
-
         $stdBody = json_decode($returnBody->getContents());
-
         $pageId = (string)$stdBody->id;
 
-        $bodyArray = [
-            'type' => 'page',
-            'title' => $title,
-            'ancestors' => [
-              ['id' => $pageId]
-            ],
-            'space' => [
-                'key' => $key
-            ],
-            'body' => [
-                'storage' => [
-                    'value' => $content,
-                    'representation' => 'storage'
-                ]
-            ]
-        ];
+        return TRUE;
     }
 
     public function getPageId(string $key, PageInterface $page) //TODO::Change for private method
@@ -124,44 +97,41 @@ class Confluence
         ];
 
         $url = sprintf(Confluence::SEARCH_PAGE, $page->title(), $key);
+        var_dump($url);
 
-//        var_dump($url);
 
+        var_dump('ID');
         $request = new Request('GET', $url, $headers);
 
         try {
+            var_dump('try');
+//var_dump($request);die;
             $response = $this->client->send($request);
         }catch(\Exception $e){
             var_dump('EEEEEEEEEEEEEEEERRRROOOOOOOOOOOOR');
             var_dump($e->getMessage());
             die;
         }
-//        var_dump($response);
-
+var_dump($response->getBody());die;
+        /** @var Stream $returnBody */
         $returnBody = $response->getBody();
+        $returnBody->
         $e = $response->getHeaders();
-//        var_dump($e);
-
-//        var_dump($response->getStatusCode());
-
-
-//        var_dump($returnBody);
-//        var_dump(json_decode($returnBody->getContents()));die;
-//        die;
 
         $stdBody = json_decode($returnBody->getContents());
 
 //        var_dump($stdBody);
-//        die;
+//        var_dump($response->getStatusCode());
+//        var_dump(count($stdBody->results));
+//        var_dump($stdBody->results);
+
         if ($response->getStatusCode() == 200 && count($stdBody->results) == 1){
 
             $id = (string)$stdBody->results[0]->id;
 
-//            var_dump($id);die;
             return $id;
 
         }
-
 
         throw new \Exception('ERROR!!!!');
 
@@ -179,6 +149,66 @@ class Confluence
         );
 
         return $base64Credentials;
+    }
+
+    /**
+     * @return array
+     */
+    private function getHeaders()
+    {
+        $headers = [
+            'Authorization' => 'Basic ' . $this->getBase64Credentials(),
+            'Content-Type' => 'application/json'
+        ];
+
+        return $headers;
+    }
+
+    /**
+     * @param string $key
+     * @param PageInterface $page
+     * @param PageInterface|NULL $parentPage
+     * @return string<json>
+     * @throws \Exception
+     */
+    private function getBody(string $key, PageInterface $page, PageInterface $parentPage = NULL)
+    {
+        $bodyArray = [
+            'type' => 'page',
+            'title' => $page->title(),
+            'space' => [
+                'key' => $key
+            ],
+            'body' => [
+                'storage' => [
+                    'value' => $page->content(),
+                    'representation' => 'storage'
+                ]
+            ]
+        ];
+
+        if (isset($parentPage)) {
+            $parentPageId = $this->getPageId($key, $parentPage);
+
+            $bodyArray['ancestors'] = [
+                ['id' => $parentPageId]
+            ];
+        }
+
+        $body = json_encode($bodyArray);
+
+        return $body;
+    }
+
+    /**
+     * @param $headers
+     * @param $body
+     * @return Request
+     */
+    private function getRequest($headers, $body)
+    {
+        $request = new Request('POST', Confluence::ADD_PAGE, $headers, $body);
+        return $request;
     }
 }
 /*
