@@ -44,31 +44,35 @@ class ConfluenceTest extends \PHPUnit_Framework_TestCase
 
         $confluence = new Confluence($client, $instance);
 
-
         $pages = $this->getPageMocks();
 
-
-        $confluence->createNewPage('test', $pages);
-//        $confluence->getPageId('test', $pageMock);
+//        $confluence->test('test', $pages);
+//        $confluence->createNewPage('test', $pages);
+//        $confluence->getPageId('test', $pages);
     }
 
     private function getPageMocks()
     {
+        $pageMock1 = $this->getMockBuilder(PageInterface::class)->setMethods(['title', 'content', 'children'])->getMock();
+        $pageMock1->method('title')->willReturn('NEW Test from php '. time() . ' ' . rand(0, 9999999));
+        $pageMock1->method('content')->willReturn(file_get_contents(__DIR__ . '/test'));
+        $pageMock1->method('children')->willReturn(NULL);
 
         $pageMock2 = $this->getMockBuilder(PageInterface::class)->setMethods(['title', 'content', 'children'])->getMock();
-        $pageMock2->method('title')->willReturn('Test from php '. time() . ' ' . random_int(0,9999999));
-        $pageMock2->method('content')->willReturn('=== Test content from mock 2 ===');
+        $pageMock2->method('title')->willReturn('NEW Test from php '. time() . ' ' . rand(0, 9999999));
+        $pageMock2->method('content')->willReturn(file_get_contents(__DIR__ .'/test'));
+        $pageMock2->method('children')->willReturn(NULL);
 
         $pageMock3 = $this->getMockBuilder(PageInterface::class)->setMethods(['title', 'content', 'children'])->getMock();
-        $pageMock3->method('title')->willReturn('Test from php '. time() . ' ' . random_int(0,9999999));
-        $pageMock3->method('content')->willReturn('=== Test content from mock 3 ===');
+        $pageMock3->method('title')->willReturn('NEW Test from php '. time() . ' ' . rand(0,9999999));
+        $pageMock3->method('content')->willReturn(file_get_contents(__DIR__ .'/test'));
+        $pageMock3->method('children')->willReturn([$pageMock1]);
 
         $mainPageMock = $this->getMockBuilder(PageInterface::class)->setMethods(['title', 'content', 'children'])->getMock();
-        $mainPageMock->method('title')->willReturn('Test from php '. time() . ' ' . random_int(0,9999999));
-        $mainPageMock->method('content')->willReturn('=== Test content from main mock ===');
+        $mainPageMock->method('title')->willReturn('11111 '. time() . ' ' . rand(0,9999999));
+//        $mainPageMock->method('title')->willReturn('NEW Test from php 1453196271 1822562');
+        $mainPageMock->method('content')->willReturn(file_get_contents(__DIR__ .'/test'));
         $mainPageMock->method('children')->willReturn([$pageMock2, $pageMock3]);
-
-
 
         return $mainPageMock;
     }

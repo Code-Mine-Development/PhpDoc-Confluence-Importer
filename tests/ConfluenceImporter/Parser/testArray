@@ -1,0 +1,3063 @@
+(
+    [0] => Array
+        (
+            [@attributes] => Array
+                (
+                    [path] => TestException/TestException.php
+                    [generated-path] => TestException.TestException.html
+                    [hash] => b69e054df086818d0af17b2b3fe0b76e
+                    [package] => Default
+                )
+
+            [docblock] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [line] => 0
+                        )
+
+                    [description] => Created by IntelliJ IDEA.
+                    [long-description] => User: yoshi
+Date: 27.01.16
+Time: 14:15
+                    [tag] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [name] => package
+                                    [line] => 0
+                                    [description] => Default
+                                )
+
+                        )
+
+                )
+
+            [class] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [final] => false
+                            [abstract] => false
+                            [namespace] => CodeMine\TestClass\TestException
+                            [line] => 15
+                            [package] => CodeMine\TestClass\TestException
+                        )
+
+                    [extends] => \Exception
+                    [name] => TestException
+                    [full_name] => \CodeMine\TestClass\TestException\TestException
+                    [docblock] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [line] => 15
+                                )
+
+                            [description] => Class TestException
+                            [long-description] => Array
+                                (
+                                )
+
+                            [tag] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [name] => package
+                                            [line] => 15
+                                            [description] => CodeMine\TestClass\TestException
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [source] => eJyFjj0PgjAQhvf+ipsZijV+JGiiBhgwccONpcIFGqE0XAeI8b/bMpAYB7d7n/fy3B1PpjEsDAIGAcQDSosVPCbItMW2VVfIkvTCfXknHCKYemqUj4nbjGC95yvBxc6TXHWOiE0kti6GjGnZIRlZIsR9hTelsciRbNxKonlKxxKNVb0+sOUFX8JX6fHZaZ6y/m+aL5e/EsDRoq4IigW93h9a9lEp
+        )
+
+    [1] => Array
+        (
+            [@attributes] => Array
+                (
+                    [path] => TestInterface/TestInterface.php
+                    [generated-path] => TestInterface.TestInterface.html
+                    [hash] => a75316cc9e550b8542ffc787b6c5339d
+                    [package] => Default
+                )
+
+            [docblock] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [line] => 0
+                        )
+
+                    [description] => Created by IntelliJ IDEA.
+                    [long-description] => User: yoshi
+Date: 27.01.16
+Time: 14:00
+                    [tag] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [name] => package
+                                    [line] => 0
+                                    [description] => Default
+                                )
+
+                        )
+
+                )
+
+            [interface] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [namespace] => CodeMine\TestClass\TestInterface
+                            [line] => 15
+                            [package] => CodeMine\TestClass\TestInterface
+                        )
+
+                    [name] => TestInterface
+                    [full_name] => \CodeMine\TestClass\TestInterface\TestInterface
+                    [docblock] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [line] => 15
+                                )
+
+                            [description] => Interface TestInterface
+                            [long-description] => Array
+                                (
+                                )
+
+                            [tag] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [name] => package
+                                            [line] => 15
+                                            [description] => CodeMine\TestClass\TestInterface
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [source] => eJyzsS/IKODS19LiUtBScC5KTSxJTVFIqlTwzCtJzcnJ9FLwdHF11ANJhhanFlkpVOYXZ2SCuC5AlVYKRuZ6BoZ6hmYgkZDMXKCIoYmVgQGQq8/FlZeYm1pckJicquCcn5Lqm5mXGhOSWlzinJNYXAxmgSwpSgMqsOaCOQEupICiACTlADQqOzGdsGlg2zNxGFTNxVULAM+9TLk=
+        )
+
+    [2] => Array
+        (
+            [@attributes] => Array
+                (
+                    [path] => TestFinalClass.php
+                    [generated-path] => TestFinalClass.html
+                    [hash] => 29f29770049f80433b714c54f86ca6d6
+                    [package] => Default
+                )
+
+            [docblock] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [line] => 0
+                        )
+
+                    [description] => Created by IntelliJ IDEA.
+                    [long-description] => User: yoshi
+Date: 28.01.16
+Time: 12:14
+                    [tag] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [name] => package
+                                    [line] => 0
+                                    [description] => Default
+                                )
+
+                        )
+
+                )
+
+            [class] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [final] => true
+                            [abstract] => false
+                            [namespace] => CodeMine\TestClass
+                            [line] => 15
+                            [package] => CodeMine\TestClass
+                        )
+
+                    [extends] => \CodeMine\TestClass\TestClass
+                    [name] => TestFinalClass
+                    [full_name] => \CodeMine\TestClass\TestFinalClass
+                    [docblock] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [line] => 15
+                                )
+
+                            [description] => Class TestFinalClass
+                            [long-description] => Array
+                                (
+                                )
+
+                            [tag] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => package
+                                                    [line] => 15
+                                                    [description] => CodeMine\TestClass
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => inherited_from
+                                                    [description] => \CodeMine\TestClass\TestClass
+                                                    [refers] => \CodeMine\TestClass\TestClass
+                                                    [link] => /classes/CodeMine.TestClass.TestClass.html
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [constant] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [namespace] => CodeMine\TestClass
+                                    [line] => 28
+                                    [package] => CodeMine\TestClass
+                                )
+
+                            [name] => TEST_CONST
+                            [full_name] => \CodeMine\TestClass\TestClass::TEST_CONST
+                            [value] => 'test const value'
+                            [docblock] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [line] => 28
+                                        )
+
+                                    [description] => Array
+                                        (
+                                        )
+
+                                    [long-description] => Array
+                                        (
+                                        )
+
+                                    [tag] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => var
+                                                    [line] => 28
+                                                    [description] =>
+                                                    [type] => string
+                                                    [variable] =>
+                                                )
+
+                                            [type] => string
+                                        )
+
+                                )
+
+                        )
+
+                    [property] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [static] => true
+                                            [visibility] => public
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 33
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => $staticValue
+                                    [full_name] => \CodeMine\TestClass\TestClass::staticValue
+                                    [default] => 'test static value'
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 33
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => var
+                                                            [line] => 33
+                                                            [description] =>
+                                                            [type] => string
+                                                            [variable] =>
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [static] => false
+                                            [visibility] => private
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 38
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => $privateValue
+                                    [full_name] => \CodeMine\TestClass\TestClass::privateValue
+                                    [default] => 'test private value'
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 38
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => var
+                                                            [line] => 38
+                                                            [description] =>
+                                                            [type] => string
+                                                            [variable] =>
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                )
+
+                            [2] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 43
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => $protectedValue
+                                    [full_name] => \CodeMine\TestClass\TestClass::protectedValue
+                                    [default] => 'test protected value'
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 43
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => var
+                                                            [line] => 43
+                                                            [description] =>
+                                                            [type] => string
+                                                            [variable] =>
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                )
+
+                            [3] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [static] => false
+                                            [visibility] => public
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 48
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => $publicValue
+                                    [full_name] => \CodeMine\TestClass\TestClass::publicValue
+                                    [default] => 'test public value'
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 48
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => var
+                                                            [line] => 48
+                                                            [description] =>
+                                                            [type] => string
+                                                            [variable] =>
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [method] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => public
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 21
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => __construct
+                                    [full_name] => \CodeMine\TestClass\TestFinalClass::__construct()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 21
+                                                )
+
+                                            [description] => TestFinalClass constructor.
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => param
+                                                            [line] => 21
+                                                            [description] =>
+                                                            [type] =>
+                                                            [variable] => $name
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $name
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => true
+                                            [visibility] => public
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 55
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => staticMethod
+                                    [full_name] => \CodeMine\TestClass\TestClass::staticMethod()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 55
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 55
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                    [variable] => $value
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 55
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 55
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $value
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => string
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestClass
+                                )
+
+                            [2] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => private
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 69
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => privateMethod
+                                    [full_name] => \CodeMine\TestClass\TestClass::privateMethod()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 69
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 69
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $value
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 69
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 69
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $value
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestClass
+                                )
+
+                            [3] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 83
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => protectedFunction
+                                    [full_name] => \CodeMine\TestClass\TestClass::protectedFunction()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 83
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 83
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $value
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 83
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 83
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $value
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestClass
+                                )
+
+                            [4] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => public
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 97
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => publicFunction
+                                    [full_name] => \CodeMine\TestClass\TestClass::publicFunction()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 97
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 97
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $value
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 97
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 97
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $value
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestClass
+                                )
+
+                            [5] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 20
+                                            [package] => CodeMine\TestClass\TestTrait
+                                        )
+
+                                    [name] => testTrait
+                                    [full_name] => \CodeMine\TestClass\TestTrait\TestClassForTrait::testTrait()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 20
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => return
+                                                            [line] => 20
+                                                            [description] =>
+                                                            [type] => string
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestTrait\TestClassForTrait
+                                )
+
+                            [6] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => true
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 25
+                                            [package] => CodeMine\TestClass\TestParentClass
+                                        )
+
+                                    [name] => HelloName
+                                    [full_name] => \CodeMine\TestClass\TestParentClass\TestParentClass::HelloName()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 25
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 25
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $name
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 25
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 25
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $name
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestParentClass\TestParentClass
+                                )
+
+                            [7] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => true
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => private
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 38
+                                            [package] => CodeMine\TestClass\TestParentClass
+                                        )
+
+                                    [name] => validate
+                                    [full_name] => \CodeMine\TestClass\TestParentClass\TestParentClass::validate()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 38
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 38
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $name
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 38
+                                                                    [description] =>
+                                                                    [type] => boolean
+                                                                )
+
+                                                            [type] => boolean
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $name
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestParentClass\TestParentClass
+                                )
+
+                            [8] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 20
+                                            [package] => CodeMine\TestClass\TestParentClass\TestAbstractClass
+                                        )
+
+                                    [name] => HelloWorld
+                                    [full_name] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass::HelloWorld()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 20
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => return
+                                                            [line] => 20
+                                                            [description] =>
+                                                            [type] => string
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass
+                                )
+
+                        )
+
+                )
+
+            [source] => eJxtkE9LAzEQxe/5FHPoQRfcdYuIbMU/bBUr6KnehJJmp24wmyzJLFik391Mtu1BOpfw3vzeTJLb+77tRZFlAjKoPUrCBtZbWFhCY/QrLOZPjzk3PwL6CrYutJrlPJIVTG/yyzIvr9lZ6i465bQqr6IshLCyw9BLhVC7Bt+0xc8lBqqNDGEmjktZAjeetZUmSfYfYvJbfp0Kp/EbpkGdSAP+ENpmtMfAr4BYaSNX9j+hnA3kB0XO5wckXsDLDib8jL1XpLMf1kYr2AxWkXYWVqtj/CzR5wkbd3J5pMFbmFCrw8XdS/xY9x6xPTxL3E7s/gDcjXYJ
+        )
+
+    [3] => Array
+        (
+            [@attributes] => Array
+                (
+                    [path] => TestParentClass/TestParentClass.php
+                    [generated-path] => TestParentClass.TestParentClass.html
+                    [hash] => 463ec87308bae6f3cd728698fd00e277
+                    [package] => Default
+                )
+
+            [docblock] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [line] => 0
+                        )
+
+                    [description] => Created by IntelliJ IDEA.
+                    [long-description] => User: yoshi
+Date: 27.01.16
+Time: 14:00
+                    [tag] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [name] => package
+                                    [line] => 0
+                                    [description] => Default
+                                )
+
+                        )
+
+                )
+
+            [namespace-alias] => Array
+                (
+                    [0] => \CodeMine\TestClass\TestException\TestException
+                    [1] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass
+                )
+
+            [class] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [final] => false
+                            [abstract] => false
+                            [namespace] => CodeMine\TestClass\TestParentClass
+                            [line] => 18
+                            [package] => CodeMine\TestClass\TestParentClass
+                        )
+
+                    [extends] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass
+                    [name] => TestParentClass
+                    [full_name] => \CodeMine\TestClass\TestParentClass\TestParentClass
+                    [docblock] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [line] => 18
+                                )
+
+                            [description] => Class TestParentClass
+                            [long-description] => Array
+                                (
+                                )
+
+                            [tag] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => package
+                                                    [line] => 18
+                                                    [description] => CodeMine\TestClass\TestParentClass
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => inherited_from
+                                                    [description] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass
+                                                    [refers] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass
+                                                    [link] => /classes/CodeMine.TestClass.TestParentClass.TestAbstractClass.TestAbstractClass.html
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [method] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => true
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass\TestParentClass
+                                            [line] => 25
+                                            [package] => CodeMine\TestClass\TestParentClass
+                                        )
+
+                                    [name] => HelloName
+                                    [full_name] => \CodeMine\TestClass\TestParentClass\TestParentClass::HelloName()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 25
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 25
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $name
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 25
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 25
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $name
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => true
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => private
+                                            [namespace] => CodeMine\TestClass\TestParentClass
+                                            [line] => 38
+                                            [package] => CodeMine\TestClass\TestParentClass
+                                        )
+
+                                    [name] => validate
+                                    [full_name] => \CodeMine\TestClass\TestParentClass\TestParentClass::validate()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 38
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 38
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $name
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 38
+                                                                    [description] =>
+                                                                    [type] => boolean
+                                                                )
+
+                                                            [type] => boolean
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $name
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [2] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass\TestParentClass
+                                            [line] => 20
+                                            [package] => CodeMine\TestClass\TestParentClass\TestAbstractClass
+                                        )
+
+                                    [name] => HelloWorld
+                                    [full_name] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass::HelloWorld()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 20
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => return
+                                                            [line] => 20
+                                                            [description] =>
+                                                            [type] => string
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass
+                                )
+
+                        )
+
+                )
+
+            [parse_markers] => Array
+                (
+                    [error] => Array
+                        (
+                            [0] => No summary for method HelloName()
+                            [1] => No summary for method validate()
+                        )
+
+                )
+
+            [source] => eJyNUt9PwjAQfu9fcQ8kbCQOMEYTEJUARowaE1FfTEzZDtY42qUtv2L43227MRwRw72s9/W7u+++7vI6jVNSr9UI1KAnkWqMYLyGIdeYJOwehv1BN7CXrwplC9ZCxcymfcNswelF0GgGzXOLjNjMIM2zVqNh0johnM5QpTRE6IkIHxnHjxEq3UuoUu70TCXyLG8TMlcHiYNViKlmgpez9n81v5q7vDtWWtLwEGIEbF2wKey1sBc3ZpcvOj1mojMg/KsR4EojjzK8pIB8EzDhVNhwAyWdQcUaWWAS9VxyMIWMTwtUx1Iss6aFPfll3X1TKTSG9nUnjNMEJnMeWhLcmXcWT2aC5+b4jp1JscEm4N12H14G0Ol0oKJjpk6uFjRhkfkB8hJ/R7fhtADHZVmOV32jyRyBKeBCA81XqPrtonpDimO+Zj7QiXwXMok8H4LMkawsLznStbEQScmWzIxUsoVZZ2fK3oJ7nuTNmPrMVshZW0GbH6YaBrs=
+        )
+
+    [4] => Array
+        (
+            [@attributes] => Array
+                (
+                    [path] => TestParentClass/TestAbstractClass/TestAbstractClass.php
+                    [generated-path] => TestParentClass.TestAbstractClass.TestAbstractClass.html
+                    [hash] => e3741c68026149e1e714c3e6e1a8c969
+                    [package] => Default
+                )
+
+            [docblock] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [line] => 0
+                        )
+
+                    [description] => Created by IntelliJ IDEA.
+                    [long-description] => User: yoshi
+Date: 28.01.16
+Time: 11:56
+                    [tag] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [name] => package
+                                    [line] => 0
+                                    [description] => Default
+                                )
+
+                        )
+
+                )
+
+            [class] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [final] => false
+                            [abstract] => true
+                            [namespace] => CodeMine\TestClass\TestParentClass\TestAbstractClass
+                            [line] => 15
+                            [package] => CodeMine\TestClass\TestParentClass\TestAbstractClass
+                        )
+
+                    [extends] => Array
+                        (
+                        )
+
+                    [name] => TestAbstractClass
+                    [full_name] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass
+                    [docblock] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [line] => 15
+                                )
+
+                            [description] => Class TestAbstractClass
+                            [long-description] => Array
+                                (
+                                )
+
+                            [tag] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [name] => package
+                                            [line] => 15
+                                            [description] => CodeMine\TestClass\TestParentClass\TestAbstractClass
+                                        )
+
+                                )
+
+                        )
+
+                    [method] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [final] => false
+                                    [abstract] => false
+                                    [static] => false
+                                    [visibility] => protected
+                                    [namespace] => CodeMine\TestClass\TestParentClass\TestAbstractClass
+                                    [line] => 20
+                                    [package] => CodeMine\TestClass\TestParentClass\TestAbstractClass
+                                )
+
+                            [name] => HelloWorld
+                            [full_name] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass::HelloWorld()
+                            [docblock] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [line] => 20
+                                        )
+
+                                    [description] => Array
+                                        (
+                                        )
+
+                                    [long-description] => Array
+                                        (
+                                        )
+
+                                    [tag] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => return
+                                                    [line] => 20
+                                                    [description] =>
+                                                    [type] => string
+                                                )
+
+                                            [type] => string
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [parse_markers] => Array
+                (
+                    [error] => No summary for method HelloWorld()
+                )
+
+            [source] => eJydUE2LwjAQvedXzE3tod0KilRhV6qgguBB8eIlTWc1WJOSxIOI/91MLCKIF98leR+8GWb0Wx9qlkQRgwhyg9xhCcUF5sphVckFzCfTcUzmxqLJ4KLtQRKd+GQG3UH8k8Zpn5S1PHklTbMe0YQxxU9oay4Qcl3iUircrdG6vOLWht+KG1QvfFxYZ7h4KEP2XIsovAXI+vP1R77/bkLYkjcKiA9Trgw8wioEP9OgOxsFPiTVvlGT8NZGOxR0wv+zEk5qBTN/Rr3VpirbnZB59BGanlaIQMi0hsG9sdsdN/V/bw==
+        )
+
+    [5] => Array
+        (
+            [@attributes] => Array
+                (
+                    [path] => TestClass.php
+                    [generated-path] => TestClass.html
+                    [hash] => c0144a2bb6c7523adf5f14e0ed660571
+                    [package] => Default
+                )
+
+            [docblock] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [line] => 0
+                        )
+
+                    [description] => Created by IntelliJ IDEA.
+                    [long-description] => User: yoshi
+Date: 27.01.16
+Time: 14:00
+                    [tag] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [name] => package
+                                    [line] => 0
+                                    [description] => Default
+                                )
+
+                        )
+
+                )
+
+            [namespace-alias] => Array
+                (
+                    [0] => \CodeMine\TestClass\TestException\TestException
+                    [1] => \CodeMine\TestClass\TestInterface\TestInterface
+                    [2] => \CodeMine\TestClass\TestParentClass\TestParentClass
+                    [3] => \CodeMine\TestClass\TestTrait\TestClassForTrait
+                )
+
+            [class] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [final] => false
+                            [abstract] => false
+                            [namespace] => CodeMine\TestClass
+                            [line] => 21
+                            [package] => CodeMine\TestClass
+                        )
+
+                    [extends] => \CodeMine\TestClass\TestParentClass\TestParentClass
+                    [implements] => \CodeMine\TestClass\TestInterface\TestInterface
+                    [name] => TestClass
+                    [full_name] => \CodeMine\TestClass\TestClass
+                    [docblock] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [line] => 21
+                                )
+
+                            [description] => Class TestClass
+                            [long-description] => Array
+                                (
+                                )
+
+                            [tag] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => package
+                                                    [line] => 21
+                                                    [description] => CodeMine\TestClass
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => inherited_from
+                                                    [description] => \CodeMine\TestClass\TestParentClass\TestParentClass
+                                                    [refers] => \CodeMine\TestClass\TestParentClass\TestParentClass
+                                                    [link] => /classes/CodeMine.TestClass.TestParentClass.TestParentClass.html
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [constant] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [namespace] => CodeMine\TestClass
+                                    [line] => 28
+                                    [package] => CodeMine\TestClass
+                                )
+
+                            [name] => TEST_CONST
+                            [full_name] => \CodeMine\TestClass\TestClass::TEST_CONST
+                            [value] => 'test const value'
+                            [docblock] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [line] => 28
+                                        )
+
+                                    [description] => Array
+                                        (
+                                        )
+
+                                    [long-description] => Array
+                                        (
+                                        )
+
+                                    [tag] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => var
+                                                    [line] => 28
+                                                    [description] =>
+                                                    [type] => string
+                                                    [variable] =>
+                                                )
+
+                                            [type] => string
+                                        )
+
+                                )
+
+                        )
+
+                    [property] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [static] => true
+                                            [visibility] => public
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 33
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => $staticValue
+                                    [full_name] => \CodeMine\TestClass\TestClass::staticValue
+                                    [default] => 'test static value'
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 33
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => var
+                                                            [line] => 33
+                                                            [description] =>
+                                                            [type] => string
+                                                            [variable] =>
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [static] => false
+                                            [visibility] => private
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 38
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => $privateValue
+                                    [full_name] => \CodeMine\TestClass\TestClass::privateValue
+                                    [default] => 'test private value'
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 38
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => var
+                                                            [line] => 38
+                                                            [description] =>
+                                                            [type] => string
+                                                            [variable] =>
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                )
+
+                            [2] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 43
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => $protectedValue
+                                    [full_name] => \CodeMine\TestClass\TestClass::protectedValue
+                                    [default] => 'test protected value'
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 43
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => var
+                                                            [line] => 43
+                                                            [description] =>
+                                                            [type] => string
+                                                            [variable] =>
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                )
+
+                            [3] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [static] => false
+                                            [visibility] => public
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 48
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => $publicValue
+                                    [full_name] => \CodeMine\TestClass\TestClass::publicValue
+                                    [default] => 'test public value'
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 48
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => var
+                                                            [line] => 48
+                                                            [description] =>
+                                                            [type] => string
+                                                            [variable] =>
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [method] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => true
+                                            [visibility] => public
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 55
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => staticMethod
+                                    [full_name] => \CodeMine\TestClass\TestClass::staticMethod()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 55
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 55
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                    [variable] => $value
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 55
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 55
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $value
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => string
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => private
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 69
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => privateMethod
+                                    [full_name] => \CodeMine\TestClass\TestClass::privateMethod()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 69
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 69
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $value
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 69
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 69
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $value
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [2] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 83
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => protectedFunction
+                                    [full_name] => \CodeMine\TestClass\TestClass::protectedFunction()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 83
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 83
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $value
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 83
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 83
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $value
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [3] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => public
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 97
+                                            [package] => CodeMine\TestClass
+                                        )
+
+                                    [name] => publicFunction
+                                    [full_name] => \CodeMine\TestClass\TestClass::publicFunction()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 97
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 97
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $value
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 97
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 97
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $value
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [4] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 20
+                                            [package] => CodeMine\TestClass\TestTrait
+                                        )
+
+                                    [name] => testTrait
+                                    [full_name] => \CodeMine\TestClass\TestTrait\TestClassForTrait::testTrait()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 20
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => return
+                                                            [line] => 20
+                                                            [description] =>
+                                                            [type] => string
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestTrait\TestClassForTrait
+                                )
+
+                            [5] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => true
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 25
+                                            [package] => CodeMine\TestClass\TestParentClass
+                                        )
+
+                                    [name] => HelloName
+                                    [full_name] => \CodeMine\TestClass\TestParentClass\TestParentClass::HelloName()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 25
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 25
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $name
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 25
+                                                                    [description] =>
+                                                                    [type] => string
+                                                                )
+
+                                                            [type] => string
+                                                        )
+
+                                                    [2] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => throws
+                                                                    [line] => 25
+                                                                    [description] =>
+                                                                    [type] => \CodeMine\TestClass\TestException\TestException
+                                                                )
+
+                                                            [type] => \CodeMine\TestClass\TestException\TestException
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $name
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestParentClass\TestParentClass
+                                )
+
+                            [6] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => true
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => private
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 38
+                                            [package] => CodeMine\TestClass\TestParentClass
+                                        )
+
+                                    [name] => validate
+                                    [full_name] => \CodeMine\TestClass\TestParentClass\TestParentClass::validate()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 38
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => param
+                                                                    [line] => 38
+                                                                    [description] =>
+                                                                    [type] =>
+                                                                    [variable] => $name
+                                                                )
+
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [name] => return
+                                                                    [line] => 38
+                                                                    [description] =>
+                                                                    [type] => boolean
+                                                                )
+
+                                                            [type] => boolean
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [argument] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 0
+                                                    [by_reference] => false
+                                                )
+
+                                            [name] => $name
+                                            [default] => Array
+                                                (
+                                                )
+
+                                            [type] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestParentClass\TestParentClass
+                                )
+
+                            [7] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [final] => false
+                                            [abstract] => false
+                                            [static] => false
+                                            [visibility] => protected
+                                            [namespace] => CodeMine\TestClass
+                                            [line] => 20
+                                            [package] => CodeMine\TestClass\TestParentClass\TestAbstractClass
+                                        )
+
+                                    [name] => HelloWorld
+                                    [full_name] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass::HelloWorld()
+                                    [docblock] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [line] => 20
+                                                )
+
+                                            [description] => Array
+                                                (
+                                                )
+
+                                            [long-description] => Array
+                                                (
+                                                )
+
+                                            [tag] => Array
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [name] => return
+                                                            [line] => 20
+                                                            [description] =>
+                                                            [type] => string
+                                                        )
+
+                                                    [type] => string
+                                                )
+
+                                        )
+
+                                    [inherited_from] => \CodeMine\TestClass\TestParentClass\TestAbstractClass\TestAbstractClass
+                                )
+
+                        )
+
+                )
+
+            [parse_markers] => Array
+                (
+                    [error] => Array
+                        (
+                            [0] => No summary for method staticMethod()
+                            [1] => No summary for method privateMethod()
+                            [2] => No summary for method protectedFunction()
+                            [3] => No summary for method publicFunction()
+                            [4] => No summary for property $staticValue
+                            [5] => No summary for property $privateValue
+                            [6] => No summary for property $protectedValue
+                            [7] => No summary for property $publicValue
+                        )
+
+                )
+
+            [source] => eJzVVG1r2zAQ/q5fcR8MeYHlZYwVnKUvpAl0rN0g3j4NiupcajFbNpKctoz89+nFVuLihgVG6fRFuufuHp0e3/nTWZEUZNjvE+jDTCBVuIK7J7jiCtOUfYary/nFwDi/SxQhPOUyYca81JEhvD8ZjMaD8UeDRCzTyPhDOBppc0gIpxnKgsYIs3yF14zjzwilmqVUygkhpJRtHnuaP8ZYKJbzpjU5lGNKFmt9XdM6mPONCuTt9sG8SFCmdtgiFxbRr6qlNDD4AAOdayl+0fs2TqtX3EwBfFTIVw7ZqwtYVqSYadO5/EPJbwJ6marbCjM+W5xZupoNFSCVYPy+goZ2j3MuFUTzZXQ7+3qzjGAKHaXpKseGpiV2/p5OKqpYDIHbf5hsz1j5jqUsBNvo5oOgOjRJa+/xrLnC2HR/4I/PmeuIo7nLu9SI4PZnrM73ImVBBc0qUghsmPcJVKXgzRvhXCUif3C94Qen7ZusSx4bX2Vfo0ryVddd0bOBrqHMYmvoLi6+LOcwnU6ByVt3Zx3d20WaZSsAjg/NIrruxVjboH8PUg9Epzfx6Vvij/XrMF2H4X4DuejtS1r9G5HqPvIqVcBblSlQCZPvTvdn4pV0qqdiT6kKWlTI21PLNdXuL/c6UrlR3+lk7f9QJLL9A809ceM=
+        )
+
+    [6] => Array
+        (
+            [@attributes] => Array
+                (
+                    [path] => TestEmptyClass.php
+                    [generated-path] => TestEmptyClass.html
+                    [hash] => cc836456f0f95c887345b5acd801ce8b
+                    [package] => Default
+                )
+
+            [docblock] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [line] => 0
+                        )
+
+                    [description] => Array
+                        (
+                        )
+
+                    [long-description] => Array
+                        (
+                        )
+
+                    [tag] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [name] => package
+                                    [line] => 0
+                                    [description] => Default
+                                )
+
+                        )
+
+                )
+
+            [class] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [final] => false
+                            [abstract] => false
+                            [namespace] => CodeMine\TestClass
+                            [line] => 6
+                            [package] => Default
+                        )
+
+                    [extends] => Array
+                        (
+                        )
+
+                    [name] => TestEmptyClass
+                    [full_name] => \CodeMine\TestClass\TestEmptyClass
+                    [docblock] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [line] => 6
+                                )
+
+                            [description] => Array
+                                (
+                                )
+
+                            [long-description] => Array
+                                (
+                                )
+
+                            [tag] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [name] => package
+                                            [line] => 6
+                                            [description] => Default
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [parse_markers] => Array
+                (
+                    [error] => Array
+                        (
+                            [0] => No summary was found for this file
+                            [1] => No summary for class \CodeMine\TestClass\TestEmptyClass
+                        )
+
+                )
+
+            [source] => eJyzsS/IKODiykvMTS0uSExOVXDOT0n1zcxLjQlJLS5xzkksLrbm4uJKBjEUQEKuuQUllWBxrmourloAyZgV5Q==
+        )
+
+    [7] => Array
+        (
+            [@attributes] => Array
+                (
+                    [path] => TestTrait/TestClassForTrait.php
+                    [generated-path] => TestTrait.TestClassForTrait.html
+                    [hash] => 542259c48d8c5fdccc29479dd8cf64ea
+                    [package] => Default
+                )
+
+            [docblock] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [line] => 0
+                        )
+
+                    [description] => Created by IntelliJ IDEA.
+                    [long-description] => User: yoshi
+Date: 27.01.16
+Time: 14:33
+                    [tag] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [name] => package
+                                    [line] => 0
+                                    [description] => Default
+                                )
+
+                        )
+
+                )
+
+            [trait] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [namespace] => CodeMine\TestClass\TestTrait
+                            [line] => 15
+                            [package] => CodeMine\TestClass\TestTrait
+                        )
+
+                    [name] => TestClassForTrait
+                    [full_name] => \CodeMine\TestClass\TestTrait\TestClassForTrait
+                    [docblock] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [line] => 15
+                                )
+
+                            [description] => Class TestClassForTrait
+                            [long-description] => Array
+                                (
+                                )
+
+                            [tag] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [name] => package
+                                            [line] => 15
+                                            [description] => CodeMine\TestClass\TestTrait
+                                        )
+
+                                )111
+
+                        )
+
+                    [method] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [final] => false
+                                    [abstract] => false
+                                    [static] => false
+                                    [visibility] => protected
+                                    [namespace] => CodeMine\TestClass\TestTrait
+                                    [line] => 20
+                                    [package] => CodeMine\TestClass\TestTrait
+                                )
+
+                            [name] => testTrait
+                            [full_name] => \CodeMine\TestClass\TestTrait\TestClassForTrait::testTrait()
+                            [docblock] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [line] => 20
+                                        )
+
+                                    [description] => Array
+                                        (
+                                        )
+
+                                    [long-description] => Array
+                                        (
+                                        )
+
+                                    [tag] => Array
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [name] => return
+                                                    [line] => 20
+                                                    [description] =>
+                                                    [type] => string
+                                                )
+
+                                            [type] => string
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [parse_markers] => Array
+                (
+                    [error] => No summary for method testTrait()
+                )
+
+            [source] => eJx9kD8LwjAQxfd8itvUDq1VUaiCSlVQcKubS6ynBmtSknMQ8bubi38m8Zbcvff4PchoXJ9qkUSRgAhyi5JwD7sbLDVhVakVLGfzaczmxqHN4GbcSfE588kMOoO4ncZpn5VCXbyS9rJu15+JEFpe0NWyRMjNHtdK47ZAR3klnQtbYaWiofjWswHfyMLYEGBr4jFnefxPCq3E2w/IXYCf0MTjkRbpajU4skof32oS3toawpJ/4nDVJSmjgT4lzVaIvHA8b0yDExDaG8NgPsTjCXHqaKA=
+        )
+
+    [8] => Array
+        (
+            [@attributes] => Array
+                (
+                    [path] => TestClassWithEmptyMethod.php
+                    [generated-path] => TestClassWithEmptyMethod.html
+                    [hash] => fef3841637b838e3f378197f1e446163
+                    [package] => Default
+                )
+
+            [docblock] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [line] => 0
+                        )
+
+                    [description] => Array
+                        (
+                        )
+
+                    [long-description] => Array
+                        (
+                        )
+
+                    [tag] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [name] => package
+                                    [line] => 0
+                                    [description] => Default
+                                )
+
+                        )
+
+                )
+
+            [class] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [final] => false
+                            [abstract] => false
+                            [namespace] => CodeMine\TestClass
+                            [line] => 10
+                            [package] => CodeMine\TestClass
+                        )
+
+                    [extends] => Array
+                        (
+                        )
+
+                    [name] => TestClassWithEmptyMethod
+                    [full_name] => \CodeMine\TestClass\TestClassWithEmptyMethod
+                    [docblock] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [line] => 10
+                                )
+
+                            [description] => Class TestClassWithEmptyMethod
+                            [long-description] => Array
+                                (
+                                )
+
+                            [tag] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [name] => package
+                                            [line] => 10
+                                            [description] => CodeMine\TestClass
+                                        )
+
+                                )
+
+                        )
+
+                    [method] => Array
+                        (
+                            [@attributes] => Array
+                                (
+                                    [final] => false
+                                    [abstract] => false
+                                    [static] => false
+                                    [visibility] => public
+                                    [namespace] => CodeMine\TestClass
+                                    [line] => 12
+                                    [package] => CodeMine\TestClass
+                                )
+
+                            [name] => methodWithoutTag
+                            [full_name] => \CodeMine\TestClass\TestClassWithEmptyMethod::methodWithoutTag()
+                            [docblock] => Array
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [line] => 12
+                                        )
+
+                                    [description] => Array
+                                        (
+                                        )
+
+                                    [long-description] => Array
+                                        (
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [parse_markers] => Array
+                (
+                    [error] => Array
+                        (
+                            [0] => No summary was found for this file
+                            [1] => No summary for method methodWithoutTag()
+                        )
+
+                )
+
+            [source] => eJyzsS/IKODi4spLzE0tLkhMTlVwzk9J9c3MS40JSS0ucc5JLC625uLS19LiUtBSAHMV4BLhmSUZrrkFJZW+qSUZ+SkgFQ5AM7IT07EZA5TW50rGb0I1lwIQFJQm5WQmK6SV5iWXZObnKeSCJUFq80tLQhLTNTSra7lqAfowQDM=
+        )
+
+)
