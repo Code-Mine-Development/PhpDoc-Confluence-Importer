@@ -7,6 +7,9 @@
  */
 
 namespace CodeMine\ConfluenceImporter\Parser\File;
+use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Collection\Properties;
+use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Constant;
+use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Property;
 
 /**
  * Class File
@@ -37,7 +40,28 @@ class File
     private $extends;
     private $implements;
 
+    /**
+     * @var Constant
+     */
     private $constant;
+
+    /**
+     * @var Properties
+     */
+    private $properties;
+
+    public function __construct()
+    {
+        $this->properties = new Properties();
+    }
+
+    /**
+     * @param Property $property
+     */
+    public function addProperty(Property $property)
+    {
+        $this->properties->attach($property);
+    }
 
 
 
@@ -114,9 +138,9 @@ class File
     }
 
     /**
-     * @param mixed $constant
+     * @param Constant $constant
      */
-    public function setConstant($constant)
+    public function setConstant(Constant $constant)
     {
         $this->constant = $constant;
     }

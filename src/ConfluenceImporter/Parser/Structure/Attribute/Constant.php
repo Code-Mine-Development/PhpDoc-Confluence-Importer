@@ -13,4 +13,14 @@ class Constant extends Attribute
 {
     private $value;
 
+    /**
+     * @param mixed $value
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+    }
+
+
+
 }

@@ -8,6 +8,8 @@
 
 namespace CodeMine\ConfluenceImporter\Parser;
 use CodeMine\ConfluenceImporter\Parser\File\File;
+use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Constant;
+use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Property;
 
 /**
  * Class Parser
@@ -26,7 +28,7 @@ class Parser
      * Parser constructor.
      * @param string $path
      */
-    public function __construct($path = '/home/yoshi/projekty/PhpDoc-Confluence-Importer/docs/structure.xml')
+    public function __construct($path = 'C:\Users\YoSHi\IdeaProjects\PhpDoc-Confluence-Importer\doc\structure.xml')
     {
         $this->xmlString = file_get_contents($path);
 
@@ -80,8 +82,24 @@ class Parser
                             $file->setNamespaceAlias($class['namespace-alias']);
                         }
 
-                        if (isset($class['constant'])){
-                            $file->setConstant();
+//                        var_dump($class);die;
+//                        var_dump((isset($class['constant'])));
+                        if (isset($class['class']['constant'])){
+                            $constant = new Constant();
+                            $name = $class['class']['constant']['name'];
+                            $fullName = $class['class']['constant']['full_name'];
+                            $valueType = $class['class']['constant']['docblock']['tag']['@attributes']['type'];
+                            $value = $class['class']['constant']['value'];
+                            $constant->setName($name);
+                            $constant->setFullName($fullName);
+                            $constant->setValueType($valueType);
+                            $constant->setValue($value);
+                            $file->setConstant($constant);
+                        }
+
+                        if (isset($class['class']['property'])){
+                            $test = $class['class']['property'];
+                            $this->setProperty($class['class']['property'], $file);
                         }
 
 
@@ -153,5 +171,22 @@ class Parser
         $json = json_encode($xml);
 
         return $json;
+    }
+
+    private function setProperty(array $property, File $file)
+    {
+//        print_r($property);
+        $zal = array_key_exists('name', $property);
+        $zalozenie = (FALSE === array_key_exists('name', $property));
+        if(FALSE === array_key_exists('name', $property)){
+            foreach ($property as $prop){
+                $this->setProperty($prop, $file);
+            }
+            return;
+        }
+        $propertyToAdd = new Property();
+        $propertyToAdd->setName($property['name']);
+
+        $file->addProperty($propertyToAdd);
     }
 }
