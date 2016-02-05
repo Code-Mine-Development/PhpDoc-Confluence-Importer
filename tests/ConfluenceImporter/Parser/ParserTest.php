@@ -13,7 +13,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
 {
     public function test()
     {
-        $parser = new Parser();
+        $parser = new Parser('/home/yoshi/projekty/PhpDoc-Confluence-Importer/docs/structure.xml');
     }
 
 

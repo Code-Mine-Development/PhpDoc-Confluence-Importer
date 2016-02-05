@@ -13,14 +13,26 @@ class Constant extends Attribute
 {
     private $value;
 
+    public function __construct(array $data)
+    {
+        $this->generateConstant($data);
+    }
+
+    private function generateConstant(array $data)
+    {
+        $this->setName($data['name']);
+        $this->setFullName($data['full_name']);
+        $this->setValueType($data['docblock']['tag']['@attributes']['type']); //TODO:: isset?
+        $this->setValue($data['value']);
+    }
+
     /**
      * @param mixed $value
      */
-    public function setValue($value)
+    private function setValue($value)
     {
         $this->value = $value;
     }
-
 
 
 }

@@ -7,9 +7,10 @@
  */
 
 namespace CodeMine\ConfluenceImporter\Parser;
-use CodeMine\ConfluenceImporter\Parser\File\File;
-use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Constant;
-use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Property;
+
+use CodeMine\ConfluenceImporter\Parser\Structure\DocClass;
+use CodeMine\ConfluenceImporter\Parser\Structure\DocInterface;
+use CodeMine\ConfluenceImporter\Parser\Structure\DocTrait;
 
 /**
  * Class Parser
@@ -39,103 +40,43 @@ class Parser
         $this->namespace  = $array['namespace'];
         $this->deprecated = $array['deprecated'];
 
-        $this->prepareFiles();
-//        print_r($this->fileArray);die;
+//        $this->prepareFiles();
     }
 
 
-    private function prepareFiles()
+    public function prepareFiles()
     {
         $fileCollection = new \SplObjectStorage();
 
-        foreach ($this->classArray as $class){
+        foreach ($this->classArray as $class) {
 
-            $file = new File();
+            $file = NULL;
 
-            if (isset($class['@attributes'])){
-                $path = $class['@attributes']['path'];
-                $package = $class['@attributes']['package'];
-                $file->setPath($path);
-                $file->setPackage($package);
-            }
-
-            foreach ($class as $key => $value){
-                switch($key){
+            foreach ($class as $key => $value) {
+                switch ($key) {
                     case 'class':
-                        $file->setType($key);
-                        $file->setAbstract(strtolower($class['class']['@attributes']['abstract']) === 'true');
-                        $file->setFinal(strtolower($class['class']['@attributes']['final']) === 'true');
-                        $file->setNamespace($class['class']['@attributes']['namespace']);
-                        $file->setExtends(is_array($class['class']['extends']) ? NULL : $class['class']['extends']);
-
-                        if (isset($class['class']['implements'])) {
-                            $file->setImplements($class['class']['implements']);
-
-                            ////        var_dump($array['file'][0]['class']['constant'][0]['name']);
-////        var_dump($array['file'][0]['class']['constant'][0]['full_name']);
-////        var_dump($array['file'][0]['class']['constant'][0]['value']);
-
-
-                        }
-
-                        if (isset($class['namespace-alias'])){
-                            $file->setNamespaceAlias($class['namespace-alias']);
-                        }
-
-//                        var_dump($class);die;
-//                        var_dump((isset($class['constant'])));
-                        if (isset($class['class']['constant'])){
-                            $constant = new Constant();
-                            $name = $class['class']['constant']['name'];
-                            $fullName = $class['class']['constant']['full_name'];
-                            $valueType = $class['class']['constant']['docblock']['tag']['@attributes']['type'];
-                            $value = $class['class']['constant']['value'];
-                            $constant->setName($name);
-                            $constant->setFullName($fullName);
-                            $constant->setValueType($valueType);
-                            $constant->setValue($value);
-                            $file->setConstant($constant);
-                        }
-
-                        if (isset($class['class']['property'])){
-                            $test = $class['class']['property'];
-                            $this->setProperty($class['class']['property'], $file);
-                        }
-
-
-                        echo $key . PHP_EOL;
+                        $file = new DocClass($class);
                         break;
                     case 'interface':
-                        $file->setType($key);
-                        $file->setNamespace($class['interface']['@attributes']['namespace']);
-                        if (isset($class['namespace-alias'])){
-                            $file->setNamespaceAlias($class['namespace-alias']);
-                        }
-
-                        echo $key . PHP_EOL;
+                        $file = new DocInterface($class);
                         break;
                     case 'trait':
-                        $file->setType($key);
-                        if (isset($class['namespace-alias'])){
-                            $file->setNamespaceAlias($class['namespace-alias']);
-                        }
-                        echo $key . PHP_EOL;
+                        $file = new DocTrait($class);
                         break;
                 }
 
             }
 
+
             $fileCollection->attach($file);
 
 
         }
+        $fileCollection->rewind();
 
         return $fileCollection;
 
     }
-
-
-
 
     /**
      * @param $xmlString
@@ -154,8 +95,8 @@ class Parser
      */
     public function xmlToArray($xmlString)
     {
-        $json = $this->generateJson($xmlString);
-        $array = json_decode($json, true);
+        $json  = $this->generateJson($xmlString);
+        $array = json_decode($json, TRUE);
 
         return $array;
 
@@ -171,22 +112,5 @@ class Parser
         $json = json_encode($xml);
 
         return $json;
-    }
-
-    private function setProperty(array $property, File $file)
-    {
-//        print_r($property);
-        $zal = array_key_exists('name', $property);
-        $zalozenie = (FALSE === array_key_exists('name', $property));
-        if(FALSE === array_key_exists('name', $property)){
-            foreach ($property as $prop){
-                $this->setProperty($prop, $file);
-            }
-            return;
-        }
-        $propertyToAdd = new Property();
-        $propertyToAdd->setName($property['name']);
-
-        $file->addProperty($propertyToAdd);
     }
 }

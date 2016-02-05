@@ -10,6 +10,8 @@ namespace CodeMine\ConfluenceImporter\Parser\File;
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Collection\Properties;
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Constant;
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Property;
+use CodeMine\ConfluenceImporter\Parser\Structure\Method\Collection\Methods;
+use CodeMine\ConfluenceImporter\Parser\Structure\Method\Method;
 
 /**
  * Class File
@@ -49,10 +51,15 @@ class File
      * @var Properties
      */
     private $properties;
+    /**
+     * @var Method
+     */
+    private $methods;
 
     public function __construct()
     {
         $this->properties = new Properties();
+        $this->methods = new Methods();
     }
 
     /**
@@ -61,6 +68,14 @@ class File
     public function addProperty(Property $property)
     {
         $this->properties->attach($property);
+    }
+
+    /**
+     * @param Method $method
+     */
+    public function addMethod(Method $method)
+    {
+        $this->methods->attach($method);
     }
 
 

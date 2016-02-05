@@ -19,7 +19,7 @@ class Attribute
     /**
      * @param string $name
      */
-    public function setName($name)
+    protected function setName($name)
     {
         $this->name = $name;
     }
@@ -27,7 +27,7 @@ class Attribute
     /**
      * @param string $fullName
      */
-    public function setFullName($fullName)
+    protected function setFullName($fullName)
     {
         $this->fullName = $fullName;
     }
@@ -35,7 +35,7 @@ class Attribute
     /**
      * @param mixed $valueType
      */
-    public function setValueType($valueType)
+    protected function setValueType($valueType)
     {
         $this->valueType = $valueType;
     }
