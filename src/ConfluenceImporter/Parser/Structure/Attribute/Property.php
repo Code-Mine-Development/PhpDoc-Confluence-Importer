@@ -23,7 +23,7 @@ class Property extends Attribute
         $this->setName($data['name']);
         $this->setFullName($data['full_name']);
         $this->setDefault($data['default']);
-        $this->setValueType($data['docblock']['tag']['type']);
+//        $this->setValueType($data['docblock']['tag']['type']);
     }
 
     /**

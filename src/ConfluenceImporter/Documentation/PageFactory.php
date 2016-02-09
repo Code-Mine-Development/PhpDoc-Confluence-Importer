@@ -13,7 +13,13 @@ use CodeMine\ConfluenceImporter\Parser\Structure\Structure;
 
 class PageFactory
 {
+    /**
+     * @var \SplObjectStorage
+     */
     private $data;
+    /**
+     * @var array
+     */
     private $namespaceTree;
 
 
@@ -46,29 +52,30 @@ class PageFactory
      */
     public function generateEmptyPages(array $namespaceArray)
     {
-        {
-            $resultPages = [];
-            foreach ($namespaceArray as $key => $value) {
 
-                if (is_array($value)) {
+        $resultPages = [];
+        foreach ($namespaceArray as $key => $value) {
 
-                    $childrenNames = $this->getChildrenNames($value);
+            if (is_array($value)) {
 
-                    $page = new Page($key);
-                    $page->addContent($childrenNames);
-                    foreach($this->generateEmptyPages($namespaceArray[$key]) as $child) {
-                        $page->addChildren($child);
-                    }
-                    $resultPages[$key] = $page;
-                } else {
-                    $page = new Page($value);
-                    $page->addContent('content');
-                    $resultPages[$value] = $page;
+                $childrenNames = $this->getChildrenNames($value);
+
+                $page = new Page($key);
+                $page->addContent($childrenNames);
+                foreach ($this->generateEmptyPages($namespaceArray[$key]) as $child) {
+                    $page->addChildren($child);
                 }
+                $resultPages[$key] = $page;
+            } else {
+                $page = new Page($value);
+                $doc = $this->getDocForNamespace($value);
+                $page->addContent($doc->getName());
+                $resultPages[$value] = $page;
             }
-
-            return $resultPages;
         }
+
+        return $resultPages;
+
     }
 
     private function addContentToPages(array $pages, \SplObjectStorage $dataPages)
@@ -76,8 +83,8 @@ class PageFactory
 
 //        $dataPages->
         /** @var Structure $page */
-        foreach ($dataPages as $key => $page){
-            echo '=='.PHP_EOL;
+        foreach ($dataPages as $key => $page) {
+            echo '==' . PHP_EOL;
             var_dump($page->getNamespace()->value());
             var_dump($page->getNamespace()->valueWithType());
             $this->searchData('test');
@@ -89,7 +96,7 @@ class PageFactory
     {
 
         /** @var Structure $page */
-        foreach ($this->data as $key => $page){
+        foreach ($this->data as $key => $page) {
             var_dump($page->getNamespace()->value());
             var_dump($key);
         }
@@ -99,10 +106,32 @@ class PageFactory
     private function getChildrenNames(array $children)
     {
         $string = NULL;
-        foreach ($children as $key => $value){
+        foreach ($children as $key => $value) {
             $string = $string . $key . PHP_EOL;
         }
         return $string;
+    }
+
+
+    /**
+     * @param $value
+     * @return Structure
+     */
+    private function getDocForNamespace($value)
+    {
+        $nameArray = explode(' ', $value);
+        $name = end($nameArray);
+        $cloneData = clone $this->data;
+        $cloneData->rewind();
+        /** @var Structure $doc */
+        foreach ($cloneData as $doc) {
+            $probablyName = sprintf('%s\%s', $doc->getNamespace()->value(), $doc->getName());
+            if ($probablyName === $name) {
+                return $doc;
+            }
+        }
+
+        throw new \InvalidArgumentException('Could not find doc for namespace');
     }
 
 

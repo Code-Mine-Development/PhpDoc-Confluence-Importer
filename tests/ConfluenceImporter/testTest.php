@@ -33,7 +33,7 @@ class testTest extends \PHPUnit_Framework_TestCase
     public function test()
     {
 
-        $parser = new Parser('/home/yoshi/projekty/PhpDoc-Confluence-Importer/docs/structure.xml');
+        $parser = new Parser(__DIR__.'/../../docs/structure.xml');
 
 
         $data = $parser->prepareFiles();

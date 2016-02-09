@@ -29,7 +29,7 @@ class Parser
      * Parser constructor.
      * @param string $path
      */
-    public function __construct($path = 'C:\Users\YoSHi\IdeaProjects\PhpDoc-Confluence-Importer\doc\structure.xml')
+    public function __construct($path)
     {
         $this->xmlString = file_get_contents($path);
 
