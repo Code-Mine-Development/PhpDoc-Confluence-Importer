@@ -9,14 +9,30 @@
 namespace CodeMine\ConfluenceImporter;
 
 
+use CodeMine\ConfluenceImporter\Documentation\PageFactory;
 use CodeMine\ConfluenceImporter\Documentation\PageTreeFactory;
 use CodeMine\ConfluenceImporter\Parser\Parser;
 //use CodeMine\ConfluenceImporter\Parser\Structure\Structure;
 
 class testTest extends \PHPUnit_Framework_TestCase
 {
+    private $testArray = [
+        'layer1' => [
+            'layer2a' => 'value2A',
+            'layer2b' => 'value2B',
+            0 => 'value_0',
+            'layer2c' => [
+                0 => 'value3'
+            ],
+        ],
+        'floor1' => [
+            0 => 'value_floor'
+        ]
+    ];
+
     public function test()
     {
+
         $parser = new Parser('/home/yoshi/projekty/PhpDoc-Confluence-Importer/docs/structure.xml');
 
 
@@ -24,16 +40,10 @@ class testTest extends \PHPUnit_Framework_TestCase
 
 
         $pageFactory = new PageTreeFactory($data);
-//        $pageFactory->generateNamespaceTree();
-//        $data = [
-//            'CodeMine\TestClass\TestException' => 'TestException',
-//            'CodeMine\TestClass\Test' => 'Test',
-//        ];
-//        $pageFactory = new PageTreeFactory();
+        $namespaceTree = $pageFactory->namespaceArray();
 
-
-//        var_dump($pageFactory->generateNamespaceTree());
-//        var_dump($pageFactory->explodeTree($data, '\\'));
+        $pageFactory = new PageFactory($data, $namespaceTree);
+        $result = $pageFactory->generatePages();
 
 
     }

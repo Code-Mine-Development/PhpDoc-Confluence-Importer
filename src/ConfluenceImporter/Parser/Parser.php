@@ -44,6 +44,9 @@ class Parser
     }
 
 
+    /**
+     * @return \SplObjectStorage<Structure>
+     */
     public function prepareFiles()
     {
         $fileCollection = new \SplObjectStorage();

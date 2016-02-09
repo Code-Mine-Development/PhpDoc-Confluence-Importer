@@ -15,16 +15,20 @@ class Page implements PageInterface
     private $content;
     private $children;
 
-    public function __construct($title, $content)
+    public function __construct($title)
     {
         $this->title = $title;
-        $this->content = $content;
         $this->children = [];
     }
 
     public function addChildren(PageInterface $page)
     {
-        array_push($this->children, $page);
+        $this->children[$page->title()]= $page;
+    }
+
+    public function addContent($content)
+    {
+        $this->content = $content;
     }
 
     public function title()

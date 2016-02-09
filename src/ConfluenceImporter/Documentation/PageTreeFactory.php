@@ -18,11 +18,10 @@ class PageTreeFactory
     private $namespaceArray;
 
 
-    public function __construct(\SplObjectStorage $data = NULL)
+    public function __construct(\SplObjectStorage $data)
     {
         $this->data = $data;
-        $this->namespaceArray = $this->generateNamespaceArray($data);
-        $PageFactory = new PageFactory($this->namespaceArray, $this->data);
+        $this->namespaceArray = $this->generateNamespaceArray();
     }
 
     public function namespaceArray()
@@ -30,6 +29,9 @@ class PageTreeFactory
         return $this->namespaceArray;
     }
 
+    /**
+     * @return array
+     */
     private function generateNamespaceArray()
     {
         $newArray = [];

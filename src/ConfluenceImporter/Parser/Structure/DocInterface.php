@@ -26,8 +26,12 @@ class DocInterface extends Structure
         $this->setName($data['interface']['name']);
 
         $this->setNamespace($namespace);
-        if (isset($class['namespace-alias'])) {
-            $this->setNamespaceAlias($class['namespace-alias']);
+        if (isset($data['namespace-alias'])) {
+            $this->setNamespaceAlias($data['namespace-alias']);
+        }
+
+        if(isset($data['interface']['@attributes']['package'])){
+            $this->setPackage($data['interface']['@attributes']['package']);
         }
     }
 }

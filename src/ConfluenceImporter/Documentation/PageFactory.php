@@ -9,102 +9,102 @@
 namespace CodeMine\ConfluenceImporter\Documentation;
 
 
+use CodeMine\ConfluenceImporter\Parser\Structure\Structure;
+
 class PageFactory
 {
-    private $array;
     private $data;
-    private $resultArray;
-    private $testArray = [
-            'layer1' => [
-                'layer2a' => 'value2A',
-                'layer2b' => 'value2B',
-                'layer2c' => [
-                    'layer3' => 'value3'
-                ],
-            ],
-            'floor1' => [
-                'floor2' => 'value_floor'
-            ]
-        ];
+    private $namespaceTree;
 
-    public function testArray(array $array, $parent = NULL)
+
+    /**
+     * PageFactory constructor.
+     *
+     * @param \SplObjectStorage $data
+     * @param array $namespaceTree
+     */
+    public function __construct(\SplObjectStorage $data, array $namespaceTree)
     {
-        $iterator =  new \RecursiveArrayIterator($array);
-
-        for($i=1; $i<=$iterator->count(); $i++){
-            if(is_array($array[$iterator->key()])){
-                $title = $iterator->key();
-                $content = NULL;
-                $page = new Page($title, $content);
-                $this->resultArray[$iterator->key()] = $page;
-
-                $parent = $iterator->key();
-                $childArray = $iterator->getChildren()->getArrayCopy();
-
-                $this->testArray($childArray, $parent);
-            }else {
-                $title = $iterator->key();
-                $content = NULL;
-                $page = new Page($title, $content);
-                $this->resultArray[$parent]->addChildren($page);
-
-            }
-
-            $iterator->next();
-        }
-        return;
-
-//        $recursive = new \RecursiveIteratorIterator($iterator);
-////        while($recursive->valid()){
-//            echo PHP_EOL . $recursive->key() . PHP_EOL;
-//        $array = [];
-//            foreach ($recursive as $item) {
-//                echo PHP_EOL .$recursive->key(). '=>' . $item . PHP_EOL;
-//                $array[] = [$recursive->key() => $item];
-//
-//            }
-//        return;
-////        }
-
-    }
-
-
-    public function __construct(array $nameSpaceArray, \SplObjectStorage $data)
-    {
-        $this->array = $nameSpaceArray;
         $this->data = $data;
-        $this->resultArray = [];
-//        $this->createPage();
-//        $this->tomek($data);
-//        $this->testArray($this->testArray);
-        $this->testArray($this->array);
-        die;
+        $this->namespaceTree = $namespaceTree;
     }
 
-    public function createPage()
+    /**
+     * @return array $filedPages
+     */
+    public function generatePages()
     {
-        $iterator =  new \RecursiveArrayIterator($this->data);
-        $rit = new \RecursiveIteratorIterator($iterator);
+        $emptyPages = $this->generateEmptyPages($this->namespaceTree);
+        $filedPages = $this->addContentToPages($emptyPages, $this->data);
 
-        foreach ($rit as $key => $value) {
-            echo PHP_EOL. $key. '=>' . $value;
-        }
+        return $filedPages;
     }
 
-
-    private function tomek($arr)
+    /**
+     * @param array $namespaceArray
+     * @return array
+     */
+    public function generateEmptyPages(array $namespaceArray)
     {
-        $iterator = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($arr));
-        $keys = array();
-        foreach ($iterator as $key => $value) {
-            // Build long key name based on parent keys
-            for ($i = $iterator->getDepth() - 1; $i >= 0; $i--) {
-                $key = $iterator->getSubIterator($i)->key() . '_' . $key;
+        {
+            $resultPages = [];
+            foreach ($namespaceArray as $key => $value) {
+
+                if (is_array($value)) {
+
+                    $childrenNames = $this->getChildrenNames($value);
+
+                    $page = new Page($key);
+                    $page->addContent($childrenNames);
+                    foreach($this->generateEmptyPages($namespaceArray[$key]) as $child) {
+                        $page->addChildren($child);
+                    }
+                    $resultPages[$key] = $page;
+                } else {
+                    $page = new Page($value);
+                    $page->addContent('content');
+                    $resultPages[$value] = $page;
+                }
             }
-            $keys[] = $key;
+
+            return $resultPages;
         }
-        var_export($keys);
     }
+
+    private function addContentToPages(array $pages, \SplObjectStorage $dataPages)
+    {
+
+//        $dataPages->
+        /** @var Structure $page */
+        foreach ($dataPages as $key => $page){
+            echo '=='.PHP_EOL;
+            var_dump($page->getNamespace()->value());
+            var_dump($page->getNamespace()->valueWithType());
+            $this->searchData('test');
+        }
+    }
+
+
+    private function searchData($string)
+    {
+
+        /** @var Structure $page */
+        foreach ($this->data as $key => $page){
+            var_dump($page->getNamespace()->value());
+            var_dump($key);
+        }
+    }
+
+
+    private function getChildrenNames(array $children)
+    {
+        $string = NULL;
+        foreach ($children as $key => $value){
+            $string = $string . $key . PHP_EOL;
+        }
+        return $string;
+    }
+
 
 }
 
