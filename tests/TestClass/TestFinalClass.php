@@ -16,6 +16,9 @@ final class TestFinalClass extends TestClass
 {
     /**
      * TestFinalClass constructor.
+     *
+     * Long description bla bla bla bla
+     * and boo foo
      * @param $name
      */
     public function __construct($name)

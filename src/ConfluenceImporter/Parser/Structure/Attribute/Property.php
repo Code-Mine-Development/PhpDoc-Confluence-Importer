@@ -20,10 +20,10 @@ class Property extends Attribute
 
     private function generateProperty(array $data)
     {
-        $this->setName($data['name']);
-        $this->setFullName($data['full_name']);
-        $this->setDefault($data['default']);
-        $this->setValueType($data['docblock']['tag']['type']);
+        $this->setName(isset($data['name']) ? $data['name'] : NULL );
+        $this->setFullName(isset($data['full_name']) ? $data['full_name'] : NULL);
+        $this->setDefault(isset($data['default']) ? $data['default'] : NULL);
+        $this->setValueType(isset($data['docblock']['tag']['type']) ? $data['docblock']['tag']['type'] : NULL);
     }
 
     /**
@@ -33,5 +33,6 @@ class Property extends Attribute
     {
         $this->default = $default;
     }
+
 
 }

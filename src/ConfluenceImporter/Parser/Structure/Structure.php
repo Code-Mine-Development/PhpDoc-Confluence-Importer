@@ -9,10 +9,14 @@
 namespace CodeMine\ConfluenceImporter\Parser\Structure;
 
 
+use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\NameClass;
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\NamespaceClass;
 
 class Structure
 {
+    /**
+     * @var NameClass
+     */
     private $name;
     private $fileName;
 
@@ -22,9 +26,13 @@ class Structure
     private $namespace;
     private $namespaceAlias;
 
+    private $description;
+    private $longDescription;
+
+
 
     /**
-     * @return mixed
+     * @return NameClass
      */
     public function getName()
     {
@@ -34,7 +42,7 @@ class Structure
     /**
      * @param mixed $name
      */
-    public function setName($name)
+    public function setName(NameClass $name)
     {
         $this->name = $name;
     }
@@ -120,6 +128,40 @@ class Structure
     {
         $this->namespaceAlias = $namespaceAlias;
     }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @param mixed $longDescription
+     */
+    public function setLongDescription($longDescription)
+    {
+        $this->longDescription = $longDescription;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLongDescription()
+    {
+        return $this->longDescription;
+    }
+
+
 
 
 }

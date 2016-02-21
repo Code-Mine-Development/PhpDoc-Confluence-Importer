@@ -11,6 +11,7 @@ namespace CodeMine\ConfluenceImporter\Parser\Structure;
 
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Collection\Properties;
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Constant;
+use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\NameClass;
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\NamespaceClass;
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\Property;
 use CodeMine\ConfluenceImporter\Parser\Structure\Method\Collection\Methods;
@@ -36,6 +37,14 @@ class DocClass extends Structure
         $this->generateStructure($data);
     }
 
+    /**
+     * @return Methods
+     */
+    public function getMethods()
+    {
+        return $this->methods;
+    }
+
     private function generateStructure($data)
     {
         $this->setPath($data['@attributes']['path']);
@@ -44,7 +53,7 @@ class DocClass extends Structure
         $namespace = new NamespaceClass($data['class']['@attributes']['namespace'], DocClass::TYPE);
 
         $this->setNamespace($namespace);
-        $this->setName($data['class']['name']);
+        $this->setName(new NameClass($data['class']['full_name'], $data['class']['full_name']));
         $this->setAbstract(strtolower($data['class']['@attributes']['abstract']) === 'true');
         $this->setFinal(strtolower($data['class']['@attributes']['final']) === 'true');
         $this->setExtend(is_array($data['class']['extends']) ? NULL : $data['class']['extends']);
@@ -72,6 +81,9 @@ class DocClass extends Structure
             $this->setMethod($data['class']['method']);
 
         }
+
+        $this->setDescription(is_array($data['class']['docblock']['description']) ? NULL : $data['class']['docblock']['description']);
+        $this->setLongDescription(is_array($data['class']['docblock']['long-description']) ? NULL : $data['class']['docblock']['long-description']);
 
     }
 

@@ -21,26 +21,23 @@ class Parser
     private $xmlString;
 
     private $classArray;
-    private $package;
-    private $namespace;
-    private $deprecated;
+
 
     /**
      * Parser constructor.
      * @param string $path
      */
-    public function __construct($path = 'C:\Users\YoSHi\IdeaProjects\PhpDoc-Confluence-Importer\doc\structure.xml')
+    public function __construct($path)
     {
+        if (FALSE === file_exists($path)){
+            throw new \InvalidArgumentException('Xml file not exist: ' . $path);
+
+        }
         $this->xmlString = file_get_contents($path);
 
         $array = $this->xmlToArray($this->xmlString);
 
         $this->classArray = $array['file'];
-        $this->package    = $array['package'];
-        $this->namespace  = $array['namespace'];
-        $this->deprecated = $array['deprecated'];
-
-//        $this->prepareFiles();
     }
 
 
@@ -67,36 +64,20 @@ class Parser
                         $file = new DocTrait($class);
                         break;
                 }
-
             }
 
-
             $fileCollection->attach($file);
-
-
         }
         $fileCollection->rewind();
 
         return $fileCollection;
-
-    }
-
-    /**
-     * @param $xmlString
-     * @return string
-     */
-    public function xmlToJson($xmlString)
-    {
-        $json = $this->generateJson($xmlString);
-
-        return $json;
     }
 
     /**
      * @param string $xmlString
      * @return array
      */
-    public function xmlToArray($xmlString)
+    private function xmlToArray($xmlString)
     {
         $json  = $this->generateJson($xmlString);
         $array = json_decode($json, TRUE);

@@ -9,6 +9,7 @@
 namespace CodeMine\ConfluenceImporter\Parser\Structure;
 
 
+use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\NameClass;
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\NamespaceClass;
 
 class DocInterface extends Structure
@@ -23,7 +24,7 @@ class DocInterface extends Structure
     private function generateInterface(array $data)
     {
         $namespace = new NamespaceClass($data['interface']['@attributes']['namespace'], DocInterface::TYPE);
-        $this->setName($data['interface']['name']);
+        $this->setName(new NameClass($data['interface']['name'], $data['interface']['full_name']));
 
         $this->setNamespace($namespace);
         if (isset($data['namespace-alias'])) {

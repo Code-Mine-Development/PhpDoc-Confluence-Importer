@@ -43,7 +43,7 @@ class testTest extends \PHPUnit_Framework_TestCase
         $namespaceTree = $pageFactory->namespaceArray();
 
         $pageFactory = new PageFactory($data, $namespaceTree);
-        $result = $pageFactory->generatePages();
+        $page = $pageFactory->getPage();
 
 
     }

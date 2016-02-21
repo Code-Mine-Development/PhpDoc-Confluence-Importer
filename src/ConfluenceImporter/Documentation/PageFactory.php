@@ -9,6 +9,7 @@
 namespace CodeMine\ConfluenceImporter\Documentation;
 
 
+use CodeMine\ConfluenceImporter\Documentation\Content\PageContent;
 use CodeMine\ConfluenceImporter\Parser\Structure\Structure;
 
 class PageFactory
@@ -29,22 +30,18 @@ class PageFactory
         $this->namespaceTree = $namespaceTree;
     }
 
-    /**
-     * @return array $filedPages
-     */
-    public function generatePages()
+    public function getPage($version)
     {
-        $emptyPages = $this->generateEmptyPages($this->namespaceTree);
-        $filedPages = $this->addContentToPages($emptyPages, $this->data);
+        $page = $this->generatePages($this->namespaceTree, $version);
 
-        return $filedPages;
+        return $page;
     }
 
     /**
      * @param array $namespaceArray
      * @return array
      */
-    public function generateEmptyPages(array $namespaceArray)
+    private function generatePages(array $namespaceArray, $version)
     {
         {
             $resultPages = [];
@@ -54,15 +51,22 @@ class PageFactory
 
                     $childrenNames = $this->getChildrenNames($value);
 
-                    $page = new Page($key);
+                    $page = new Page($key . " ({$version})");
                     $page->addContent($childrenNames);
-                    foreach($this->generateEmptyPages($namespaceArray[$key]) as $child) {
+//                    $page->addContent(file_get_contents('/home/yoshi/projekty/PhpDoc-Confluence-Importer/tests/ConfluenceImporter/Service/test'));
+                    foreach($this->generatePages($namespaceArray[$key], $version) as $child) {
                         $page->addChildren($child);
                     }
                     $resultPages[$key] = $page;
                 } else {
-                    $page = new Page($value);
-                    $page->addContent('content');
+                    $page = new Page($value . " ({$version})");
+
+                    $doc = $this->getDocForNamespace($value);
+
+                    $pageContent = new PageContent($doc);
+
+                    $page->addContent($pageContent->getXhtmlForPageContent());
+//                    $page->addContent(file_get_contents('/home/yoshi/projekty/PhpDoc-Confluence-Importer/tests/ConfluenceImporter/Service/test'));
                     $resultPages[$value] = $page;
                 }
             }
@@ -71,40 +75,36 @@ class PageFactory
         }
     }
 
-    private function addContentToPages(array $pages, \SplObjectStorage $dataPages)
-    {
-
-//        $dataPages->
-        /** @var Structure $page */
-        foreach ($dataPages as $key => $page){
-            echo '=='.PHP_EOL;
-            var_dump($page->getNamespace()->value());
-            var_dump($page->getNamespace()->valueWithType());
-            $this->searchData('test');
-        }
-    }
-
-
-    private function searchData($string)
-    {
-
-        /** @var Structure $page */
-        foreach ($this->data as $key => $page){
-            var_dump($page->getNamespace()->value());
-            var_dump($key);
-        }
-    }
-
 
     private function getChildrenNames(array $children)
     {
         $string = NULL;
-        foreach ($children as $key => $value){
-            $string = $string . $key . PHP_EOL;
-        }
+//        foreach ($children as $key => $value){
+//            $string = $string . $key . PHP_EOL;
+//        }
         return $string;
     }
 
+     /**
+     * @param $value
+     * @return Structure
+     */
+    private function getDocForNamespace($value)
+    {
+        $nameArray = explode(' ', $value);
+        $name = end($nameArray);
+        $cloneData = clone $this->data;
+        $cloneData->rewind();
+        /** @var Structure $doc */
+        foreach ($cloneData as $doc) {
+            $probablyName = sprintf('%s\%s', $doc->getNamespace()->value(), $doc->getName()->name());
+            if ($probablyName === $name) {
+                return $doc;
+            }
+        }
+
+        throw new \InvalidArgumentException('Could not find doc for namespace');
+    }
 
 }
 

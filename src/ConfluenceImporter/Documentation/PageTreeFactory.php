@@ -40,7 +40,7 @@ class PageTreeFactory
         /** @var Structure $item */
         foreach ($this->data as $item) {
 
-            $newArray[] = $this->buildTree($item->getNamespace()->value(), $item->getNamespace()->getType(), $item->getName());
+            $newArray[] = $this->buildTree($item->getNamespace()->value(), $item->getNamespace()->getType(), $item->getName()->name());
         }
 
         $combined = [];

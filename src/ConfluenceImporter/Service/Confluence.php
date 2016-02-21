@@ -17,6 +17,7 @@ use GuzzleHttp\Psr7\Stream;
 class Confluence
 {
     const ADD_PAGE = 'rest/api/content';
+//    const ADD_PAGE = 'sb0x2gsb'; //requestb.in
     const SEARCH_PAGE = 'rest/api/content/search';
 
     /**
@@ -31,10 +32,6 @@ class Confluence
     /**
      * Confluence constructor.
      *
-     * blabdlabsdaldbalsbdals
-     * aldnalsdlasdn
-     * alndlasndsdijfpgaijfawl
-     *
      * @param \GuzzleHttp\ClientInterface $client
      * @param \CodeMine\ConfluenceImporter\Service\Confluence\InstanceInterface $confluenceInstance
      */
@@ -44,34 +41,43 @@ class Confluence
         $this->confluenceInstance = $confluenceInstance;
     }
 
+    public function createPage($key, array $page, PageInterface $parentPage = NULL)
+    {
+        foreach ($page as $item) {
+            $this->generateNewPage($key, $item, $parentPage);
+        }
+    }
+
     /**
      * @param $key
      * @param PageInterface $page
      * @param PageInterface|NULL $parentPage
      * @param null $id
-     *
-     * @docblock bla bla bla bla bla bla bla
      */
-    public function createNewPage($key, PageInterface $page, PageInterface $parentPage = NULL, $id = NULL)
+    private function generateNewPage($key, PageInterface $page, PageInterface $parentPage = NULL, $id = NULL)
     {
-        $body = $this->getBody($key, $page, $parentPage, $id);
-        $headers = $this->getHeaders();
+        /** @var PageInterface $page */
 
-        try {
-            $request = $this->getRequest($headers, $body);
-            $response = $this->client->send($request); //TODO: find solution for exception on same page name
-            $pageChildren = $page->children();
+            $body    = $this->getBody($key, $page, $parentPage, $id);
+            $headers = $this->getHeaders();
 
-            $newPageId = json_decode($response->getBody()->getContents())->id;
+            try {
+                $request      = $this->getRequest($headers, $body);
+                $response     = $this->client->send($request); //TODO: find solution for exception on same page name
+                $pageChildren = $page->children();
 
-            if (null !== $pageChildren) {
-                foreach ($pageChildren as $pageChild) {
-                    $this->createNewPage($key, $pageChild, $page, $newPageId);
+                $newPageId = json_decode($response->getBody()->getContents())->id;
+
+                if (NULL !== $pageChildren) {
+                    foreach ($pageChildren as $pageChild) {
+                        $this->generateNewPage($key, $pageChild, $page, $newPageId);
+                    }
                 }
+            } catch (ClientException $e) {
+                //silent
+                echo '============================================';
+                var_dump($e->getMessage());die;
             }
-        } catch (ClientException $e) {
-            //silent
-        }
     }
 
     public function getPageId($key, PageInterface $page) //TODO::Change for private method

@@ -9,6 +9,7 @@
 namespace CodeMine\ConfluenceImporter\Parser\Structure;
 
 
+use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\NameClass;
 use CodeMine\ConfluenceImporter\Parser\Structure\Attribute\NamespaceClass;
 
 class DocTrait extends Structure
@@ -23,7 +24,7 @@ class DocTrait extends Structure
 
     private function generateTrait(array $data)
     {
-        $this->setName($data['trait']['name']);
+        $this->setName(new NameClass($data['trait']['name'], $data['trait']['full_name']));
 
         if (isset($data['trait']['@attributes']['namespace'])) {
             $namespace = new NamespaceClass($data['trait']['@attributes']['namespace'], DocTrait::TYPE);
