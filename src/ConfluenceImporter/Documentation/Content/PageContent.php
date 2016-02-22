@@ -89,6 +89,7 @@ class PageContent
 <th>Inherited from</th>
 <td><span style=\"color: rgb(68,68,68);\">{$this->extend}</span></td></tr></tbody></table>
 <h3>Methods</h3>
+<hr>
 
 {$this->writeDownMethods()}
 
@@ -111,10 +112,9 @@ class PageContent
         foreach($this->methods as $method){
             $string .= "
     <ac:structured-macro ac:macro-id=\"43484e81-d0fd-4d40-b990-a7d90cd2b565\" ac:name=\"panel\" ac:schema-version=\"1\"><ac:parameter ac:name=\"borderStyle\">solid</ac:parameter><ac:rich-text-body>
-    <h4>&nbsp;<span style=\"color: rgb(51,51,51);\">:{$method->name()}</span></h4>
-    <hr />
+    <h4>&nbsp;<span style=\"color: rgb(51,51,51);\">::{$method->name()}</span></h4>
     <p><span style=\"color: rgb(51,51,51);\">&nbsp;</span></p>
-    <p>{$method->description()}</p><ac:structured-macro ac:macro-id=\"9de243a9-ca88-45e1-a6d4-7ff9b542babd\" ac:name=\"code\" ac:schema-version=\"1\"><ac:parameter ac:name=\"language\">php</ac:parameter><ac:parameter ac:name=\"theme\">Confluence</ac:parameter><ac:plain-text-body><![CDATA[{$method->name()}({$this->writeDownParams()})]]></ac:plain-text-body></ac:structured-macro>
+    <p>{$method->description()}</p><ac:structured-macro ac:macro-id=\"9de243a9-ca88-45e1-a6d4-7ff9b542babd\" ac:name=\"code\" ac:schema-version=\"1\"><ac:parameter ac:name=\"language\">php</ac:parameter><ac:parameter ac:name=\"theme\">Confluence</ac:parameter><ac:plain-text-body><![CDATA[{$method->name()}({$this->writeDownParamsForMethod($method)})]]></ac:plain-text-body></ac:structured-macro>
     <h5>Parameters</h5><ac:structured-macro ac:macro-id=\"a2230db4-ea43-4e99-89d9-2661a57fd5c3\" ac:name=\"expand\" ac:schema-version=\"1\"><ac:rich-text-body>
     <table>
         <tbody>
@@ -122,27 +122,47 @@ class PageContent
                 <th>Parameter</th>
                 <th>Data type</th>
                 <th>Description</th></tr>
-            <tr>
-                <td>filename</td>
-                <td>mixed</td>
-                <td>&nbsp;</td></tr>
-            <tr>
-                <td>realm</td>
-                <td>mixed</td>
-                <td>&nbsp;</td></tr></tbody></table></ac:rich-text-body></ac:structured-macro></ac:rich-text-body></ac:structured-macro>
+            {$this->writeDownParamsForTable($method)}
+        </tbody>
+    </table>
+    </ac:rich-text-body></ac:structured-macro></ac:rich-text-body></ac:structured-macro>
 ";
         }
         return $string;
     }
 
-    private function writeDownParams()
+    private function writeDownParamsForMethod(Method $method)
     {
+
+        $counter = 0;
         $string = '';
 
         /** @var Param $param */
-        foreach ($this->params as $param){
+        foreach ($method->params() as $param){
+            if ($counter != 0){
+                $string .= ', ';
+            }
             $string .= $param->type() . ' ' . $param->name();
+            $counter++;
         }
+        return $string;
+    }
+
+    private function writeDownParamsForTable(Method $method)
+    {
+
+        $string = '<tr>';
+
+        /** @var Param $param */
+        foreach($method->params() as $param){
+            $string .= "
+                    <td>{$param->name()}</td>
+                    <td>{$param->type()}</td>
+                    <td>&nbsp;</td>
+                    ";
+        }
+        $string .= '</tr>';
+
         return $string;
     }
 
@@ -174,18 +194,23 @@ class PageContent
 <p><span style="color: rgb(51,51,51);">&nbsp;</span></p>
 <p>Sets adapter options</p><ac:structured-macro ac:macro-id="9de243a9-ca88-45e1-a6d4-7ff9b542babd" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">php</ac:parameter><ac:parameter ac:name="theme">Confluence</ac:parameter><ac:plain-text-body><![CDATA[__construct(mixed $filename = null, mixed $realm = null, mixed $identity = null, mixed $credential = null)]]></ac:plain-text-body></ac:structured-macro>
 <h5>Parameters</h5><ac:structured-macro ac:macro-id="a2230db4-ea43-4e99-89d9-2661a57fd5c3" ac:name="expand" ac:schema-version="1"><ac:rich-text-body>
+
 <table>
 <tbody>
+
 <tr>
-<th>Parameter</th>
-<th>Data type</th>
-<th>Description</th></tr>
+    <th>Parameter</th>
+    <th>Data type</th>
+    <th>Description</th></tr>
 <tr>
-<td>$filename</td>
-<td>mixed</td>
-<td>&nbsp;</td></tr>
+    <td>$filename</td>
+    <td>mixed</td>
+    <td>&nbsp;</td></tr>
 <tr>
-<td>$realm</td>
-<td>mixed</td>
-<td>&nbsp;</td></tr></tbody></table></ac:rich-text-body></ac:structured-macro></ac:rich-text-body></ac:structured-macro></ac:layout-cell></ac:layout-section></ac:layout>
+    <td>$realm</td>
+    <td>mixed</td>
+    <td>&nbsp;</td></tr>
+</tbody></table>
+
+</ac:rich-text-body></ac:structured-macro></ac:rich-text-body></ac:structured-macro></ac:layout-cell></ac:layout-section></ac:layout>
 */

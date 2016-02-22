@@ -13,6 +13,7 @@ class Param
 {
     private $type;
     private $name;
+    private $description;
 
     public function __construct($data)
     {
@@ -36,6 +37,11 @@ class Param
     public function name()
     {
         return $this->name;
+    }
+
+    public function description()
+    {
+        return $this->description;
     }
 
 
